@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "storybook ide",
   "keywords": [
-    "storybook-addons", "storybook-addons"
+    "storybook-addons",
+    "storybook-addons"
   ],
   "repository": {
     "type": "git",
@@ -24,7 +25,7 @@
     "clean": "rimraf ./dist",
     "buildBabel": "concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
     "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx,.ts,.tsx\"",
-    "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\"",
+    "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\" --",
     "buildTsc": "tsc --declaration --emitDeclarationOnly --outDir ./dist/ts",
     "prebuild": "yarn clean",
     "build": "concurrently \"yarn buildBabel\" \"yarn buildTsc\"",
@@ -47,8 +48,8 @@
     "@storybook/react": "^6.5.8",
     "auto": "^10.3.0",
     "babel-loader": "^8.1.0",
-    "boxen": "^5.0.1",
     "concurrently": "^6.2.0",
+    "boxen": "^5.0.1",
     "dedent": "^0.7.0",
     "prettier": "^2.3.1",
     "prop-types": "^15.7.2",
@@ -81,7 +82,15 @@
   "storybook": {
     "displayName": "IDE",
     "supportedFrameworks": [
-      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }

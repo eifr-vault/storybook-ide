@@ -38,7 +38,6 @@ const HeaderBar = styled.div({
   cursor: "pointer",
   borderLeft: "3px solid transparent",
   width: "100%",
-
   "&:focus": {
     outline: "0 none",
     borderLeft: `3px solid ${convert(themes.normal).color.secondary}`,
